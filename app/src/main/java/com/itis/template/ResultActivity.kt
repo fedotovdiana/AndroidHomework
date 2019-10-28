@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import kotlinx.android.synthetic.main.activity_result.*
 
-
 class ResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
