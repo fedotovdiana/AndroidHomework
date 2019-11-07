@@ -11,9 +11,9 @@ class DescriptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_description)
-        val title = intent?.extras?.getString(KEY_TITLE) ?: "DEFAULT NAME"
-        val year = intent?.extras?.getString(KEY_YEAR) ?: "DEFAULT NAME"
-        val country = intent?.extras?.getString(KEY_COUNTRY) ?: "DEFAULT NAME"
+        val title = intent?.extras?.getString(KEY_TITLE) ?: DEFAULT_NAME
+        val year = intent?.extras?.getString(KEY_YEAR) ?: DEFAULT_NAME
+        val country = intent?.extras?.getString(KEY_COUNTRY) ?: DEFAULT_NAME
         val img = intent?.extras?.getInt(KEY_IMG) ?: R.drawable.homealone
         tv_desc_title.text = title
         tv_desc_year.text = year
@@ -23,6 +23,7 @@ class DescriptionActivity : AppCompatActivity() {
 
     companion object {
 
+        private const val DEFAULT_NAME = "DEFAULT NAME"
         private const val KEY_TITLE = "title"
         private const val KEY_YEAR = "year"
         private const val KEY_COUNTRY = "country"
