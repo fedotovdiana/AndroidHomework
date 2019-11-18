@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_first"
+        android:icon="@drawable/ic_cake_24px"
+        android:title="@string/first" />
+
+    <item
+        android:id="@+id/navigation_second"
+        android:icon="@drawable/ic_local_florist_24px"
+        android:title="@string/second" />
+
+    <item
+        android:id="@+id/navigation_third"
+        android:icon="@drawable/ic_emoji_nature_24px"
+        android:title="@string/third" />
+
+</menu>
