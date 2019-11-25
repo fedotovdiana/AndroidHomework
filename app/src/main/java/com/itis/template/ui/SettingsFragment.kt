@@ -23,19 +23,17 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         btn_to_result.setOnClickListener {
-            activity?.supportFragmentManager.also {
-                it?.beginTransaction()?.apply {
-                    setCustomAnimations(R.animator.enter_from_left,
-                            R.animator.enter_from_right)
-                    replace(R.id.container,
-                            ResultFragment.newInstance(
-                                    et_name.text.toString(),
-                                    et_surname.text.toString()
-                            )
-                    )
-                    addToBackStack(null)
-                    commit()
-                }
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+				setCustomAnimations(R.animator.enter_from_left,
+						R.animator.enter_from_right)
+				replace(R.id.container,
+						ResultFragment.newInstance(
+								et_name.text.toString(),
+								et_surname.text.toString()
+						)
+				)
+				addToBackStack(null)
+				commit()
             }
         }
     }

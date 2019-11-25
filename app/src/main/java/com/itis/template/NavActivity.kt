@@ -32,14 +32,7 @@ class NavActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-
-        supportFragmentManager.also {
-            it.beginTransaction().apply {
-                replace(R.id.container, ProfileFragment.newInstance())
-                addToBackStack(ProfileFragment::class.java.name)
-                commit()
-            }
-        }
+		setFragment(ProfileFragment)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -51,48 +44,34 @@ class NavActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         when (menuItem.itemId) {
             R.id.nav_profile -> {
                 supportActionBar?.title = "Profile"
-                supportFragmentManager.also {
-                    it.beginTransaction().apply {
-                        replace(R.id.container, ProfileFragment.newInstance())
-                        addToBackStack(null)
-                        commit()
-                    }
-                }
+                setFragment(ProfileFragment)
             }
             R.id.nav_music -> {
                 supportActionBar?.title = "Music"
-                supportFragmentManager.also {
-                    it.beginTransaction().apply {
-                        replace(R.id.container, MusicFragment.newInstance())
-                        addToBackStack(null)
-                        commit()
-                    }
-                }
+                 setFragment(MusicFragment)
             }
             R.id.nav_friends -> {
                 supportActionBar?.title = "Friends"
-                supportFragmentManager.also {
-                    it.beginTransaction().apply {
-                        replace(R.id.container, FriendsFragment.newInstance())
-                        addToBackStack(null)
-                        commit()
-                    }
-                }
+                 setFragment(FriendsFragment)
             }
             R.id.nav_photos -> {
                 supportActionBar?.title = "Photos"
-                supportFragmentManager.also {
-                    it.beginTransaction().apply {
-                        replace(R.id.container, PhotosFragment.newInstance())
-                        addToBackStack(null)
-                        commit()
-                    }
-                }
+                setFragment(PhotosFragment)
             }
         }
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+	
+	private fun setFragment(fragment: Fragment) {
+		supportFragmentManager.also {
+			it.beginTransaction().apply {
+				replace(R.id.container, fragment.newInstance())
+				addToBackStack(null)
+				commit()
+			}
+		}
+	}
 
     override fun onBackPressed() {
         val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
