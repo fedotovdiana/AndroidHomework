@@ -5,9 +5,8 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.itis.template.ui.FirstFragment
-import com.itis.template.ui.SecondFragment
-import com.itis.template.ui.ThirdFragment
+import com.itis.template.advert_page.ThirdFragment
+import com.itis.template.film_page.SecondFragment
 import kotlinx.android.synthetic.main.activity_bottom_nav.*
 
 class BottomNavActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {

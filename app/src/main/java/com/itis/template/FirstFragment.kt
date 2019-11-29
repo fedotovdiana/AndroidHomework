@@ -1,4 +1,4 @@
-package com.itis.template.ui
+package com.itis.template
 
 
 import android.os.Bundle
@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-
-import com.itis.template.R
 
 class FirstFragment : Fragment() {
 
