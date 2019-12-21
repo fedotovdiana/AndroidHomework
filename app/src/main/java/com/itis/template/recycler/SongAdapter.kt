@@ -8,10 +8,10 @@ class SongAdapter(
         private val clickLambda: (Song) -> Unit
 ) : RecyclerView.Adapter<SongItemHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongItemHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
             SongItemHolder.create(parent, clickLambda)
 
-    override fun getItemCount(): Int = songs.size
+    override fun getItemCount() = songs.size
 
     override fun onBindViewHolder(holder: SongItemHolder, position: Int) =
             holder.bind(songs[position])

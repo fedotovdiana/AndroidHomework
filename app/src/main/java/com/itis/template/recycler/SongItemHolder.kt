@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.item_song.*
 class SongItemHolder(
         override val containerView: View,
         private val clickLambda: (Song) -> Unit
-//        private val clickLambda: (String, String, String, Int) -> Unit
 ) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     fun bind(song: Song) {

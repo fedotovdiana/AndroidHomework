@@ -10,64 +10,66 @@
         android:id="@+id/iv_cover"
         android:layout_width="wrap_content"
         android:layout_height="240dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/cinema"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/cinema" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="TextView"
-        android:textSize="30sp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_cover" />
+        app:layout_constraintTop_toBottomOf="@id/iv_cover"
+        tools:text="Never gonna give you up" />
 
     <TextView
         android:id="@+id/tv_singer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:layout_marginTop="8dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        tools:text="Rick Astley" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Play/pause"
-        app:layout_constraintEnd_toStartOf="@+id/btn_next"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        app:layout_constraintEnd_toStartOf="@id/btn_next"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/btn_pre"
-        app:layout_constraintTop_toBottomOf="@+id/tv_singer" />
+        app:layout_constraintTop_toBottomOf="@id/tv_singer"
+        app:srcCompat="@drawable/ic_stop_black_24dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_pre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:text="Pre"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:src="@drawable/ic_skip_previous_black_24dp"
         app:layout_constraintEnd_toStartOf="@id/btn_play"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_singer" />
+        app:layout_constraintTop_toBottomOf="@id/tv_singer" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Next"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:src="@drawable/ic_skip_next_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_play"
-        app:layout_constraintTop_toBottomOf="@+id/tv_singer" />
+        app:layout_constraintTop_toBottomOf="@id/tv_singer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
